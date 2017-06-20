@@ -78,3 +78,9 @@ $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
 $ sudo chmod a+r /usr/local/cuda/include/cudnn.h
 $ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
 ```
+
+## Github
+```bash
+$ sudo apt-get install git
+$ git config --global alias.lg "log -10 --oneline --graph"
+```
