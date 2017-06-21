@@ -1,8 +1,18 @@
-server-policy
+DMIS SERVER POLICY
 =========================================================================
 Server policy for Data Mining &amp; Information Lab
 
-# Basic setup
+## Server ip
+|   server   |     ip            |      VGA    |    admin   |   user   |  user+   |
+|:----------:|:-----------------:|:-----------:|:----------:|:--------:|:--------:|
+|  gPower 0  | 163.152.163.108   | GTX Titan X |   jinhyuk  |  hyunjae |  miyoung |
+|  gPower 2  | 163.152.163.112   | GTX Titan X |   buru     |  gyeom   |    -     |
+|  gPower 3  | 163.152.163.221   | GTX Titan X |   bumsoo   |  nayoung |  daehan  |
+|  gPower 4  | 163.152.163.222   | GTX Titan X |   sunkyu   |  heewon  |          |
+|  gPower 5  | 163.152.163.223   | GTX Titan X |  byounggun |  billal  |          |
+|  gPower 6  | 163.152.163.210   | GTX 1080    |   wonjin   |          |          |
+
+## Basic setup
 
 ```bash
 $ sudo apt-get install vim
@@ -77,6 +87,22 @@ $ sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
 $ sudo chmod a+r /usr/local/cuda/include/cudnn.h
 $ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+```
+
+## Server welcome notice
+```bash
+printf "\nWelcome to Ubuntu 16.04.5 LTS (GNU/Linux-Mint-18 x86_64)\n"
+printf "This is the server for the Data Mining & Information System Lab.\n\n"
+printf " * Documentation: https://github.com/meliketoy/server-policy\n\n"
+printf "##############################################################\n"
+figlet -f slant "G-POWER [:#]"
+printf "\n\n"
+printf " Data Mining & Information System Lab\n"
+printf " GPU Computing machine : 163.152.163.[:ip]\n\n"
+printf " Administrator   : [:admin]\n"
+printf " Please read the document\n"
+printf "    https://github.com/meliketoy/server-policy/README.md\n"
+printf "##############################################################\n\n"
 ```
 
 ## Github
