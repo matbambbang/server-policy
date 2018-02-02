@@ -6,7 +6,7 @@ Server policy for Data Mining &amp; Information Lab
 |   server   |     ip            |      VGA    |    admin   |   user   |  user+   |
 |:----------:|:-----------------:|:-----------:|:----------:|:--------:|:--------:|
 |  gPower 0  | 163.152.163.108   | GTX Titan X |   jinhyuk  |  hyunjae |  miyoung |
-|  gPower 2  | 163.152.163.112   | GTX Titan X |   buru     |  gyeom   |    -     |
+|  gPower 2  | 163.152.163.112   | GTX Titan X |   yongqyu  |  buru    |  raehyun |
 |  gPower 3  | 163.152.163.221   | GTX Titan X |   bumsoo   |  nayoung |  daehan  |
 |  gPower 4  | 163.152.163.222   | GTX Titan X |   sunkyu   |  heewon  |          |
 |  gPower 5  | 163.152.163.223   | GTX Titan X |  byounggun |  billal  |          |
@@ -33,6 +33,42 @@ The nvidia-driver will automatically be set up during the configuration.
 
 ```bash
 $ sudo <[:download_dir]>/cuda_8.0.44_linux.run
+or
+$ sudo sh <[:download_dir]>/cuda_8.0.44_linux.run
+
+*
+Do you accept the previously read EULA?
+accept/decline/quit: accept
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81?
+(y)es/(n)o/(q)uit: y
+
+Do you want to install the OpenGL libraries?
+(y)es/(n)o/(q)uit [ default is yes ]: n
+
+Do you want to run nvidia-xconfig?
+This will update the system X configuration file so that the NVIDIA X driver
+is used. The pre-existing X configuration file will be backed up.
+This option should not be used on systems that require a custom
+X configuration, such as systems with multiple GPU vendors.
+(y)es/(n)o/(q)uit [ default is no ]:
+
+Install the CUDA 9.0 Toolkit?
+(y)es/(n)o/(q)uit: y
+
+Enter Toolkit Location
+ [ default is /usr/local/cuda-9.0 ]:
+
+Do you want to install a symbolic link at /usr/local/cuda?
+(y)es/(n)o/(q)uit: y
+
+Install the CUDA 9.0 Samples?
+(y)es/(n)o/(q)uit: y
+
+Enter CUDA Samples Location
+ [ default is /home/dmis ]:
+
+Installing the NVIDIA display driver...
 ```
 ```bash
 $ vi ~/.bashrc
@@ -82,7 +118,7 @@ Cuda compilation tools, release 8.0, V8.0.44
 
 ```bash
 $ cd <DOWNLOAD DIR>
-$ tar -zxvf ./cudnn-8.0-linux-x64-v5.1.tgz
+$ sudo tar -zxvf ./cudnn-8.0-linux-x64-v5.1.tgz (or .solitairetheme8)
 $ sudo cp cuda/include/cudnn.h /usr/local/cuda/include/
 $ sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64/
 $ sudo chmod a+r /usr/local/cuda/include/cudnn.h
@@ -91,6 +127,10 @@ $ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
 
 ## Server welcome notice
 ```bash
+$ sudo apt-get install figlet
+$ sudo vi /etc/update-motd.d/00-header
+
+# add this to bashrc
 printf "\nWelcome to Ubuntu 16.04.5 LTS (GNU/Linux-Mint-18 x86_64)\n"
 printf "This is the server for the Data Mining & Information System Lab.\n\n"
 printf " * Documentation: https://github.com/meliketoy/server-policy\n\n"
