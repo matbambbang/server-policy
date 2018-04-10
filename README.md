@@ -119,8 +119,10 @@ Multi-CUDA version
     ln -s /usr/local/cuda-8.0 /usr/local/cuda
 3. 대신 내 환경의 환경설정을 바꿔서 다른 path의 툴킷을 사용. 
 4. 이를 위해 ~/wonjinenv/bin/activate 파일의 제일 마지막 부분에 아래 코드들을 삽입(PATH=/usr/local/cuda-9.0/bin:$PATH 임에 주의)
->    export PATH=/usr/local/cuda-9.0/bin:$PATH  
->    export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64  
->    export CUDA_HOME=/usr/local/cuda-9.0  
+```bash
+export PATH=/usr/local/cuda-9.0/bin:$PATH  
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64  
+export CUDA_HOME=/usr/local/cuda-9.0  
+```
     
 https://blog.kovalevskyi.com/multiple-version-of-cuda-libraries-on-the-same-machine-b9502d50ae77
