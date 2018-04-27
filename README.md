@@ -29,6 +29,17 @@ $ source ~/.bashrc
 
 ## Install CUDA
 
+
+Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the following contents:
+```
+blacklist nouveau
+options nouveau modeset=0
+```
+Regenerate the kernel initramfs:
+```bash
+$ sudo update-initramfs -u
+```
+
 The nvidia-driver will automatically be set up during the configuration.
 
 ```bash
