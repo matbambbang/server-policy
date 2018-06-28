@@ -41,6 +41,7 @@ $ sudo update-initramfs -u
 ```
 
 The nvidia-driver will automatically be set up during the configuration.
+Install *driver* and *toolkit*.
 
 ```bash
 $ sudo <[:download_dir]>/cuda_8.0.44_linux.run
@@ -101,6 +102,13 @@ $ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
 ```
 
 ## Server welcome notice
+
+```bash
+$ sudo apt install figlet
+```
+
+/etc/update-motd.d/00-header
+
 ```bash
 printf "\nWelcome to Ubuntu 16.04.5 LTS (GNU/Linux-Mint-18 x86_64)\n"
 printf "This is the server for the Data Mining & Information System Lab.\n\n"
